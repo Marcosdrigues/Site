@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- Title -->
+    <title>WALLTIC</title>
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../Projeto/assets/lib/Imagens/transparent-w.png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../Projeto/assets/lib/css/nova-icons.css">
+    <!-- CSS Implementing Libraries -->
+    <link rel="stylesheet" href="../Projeto/assets/lib/css/animate.css">
+    <link rel="stylesheet" href="../Projeto/assets/lib/css/scrollbar.css">
+    <link rel="stylesheet" href="../Projeto/assets/lib/css/flatpickr.css">
+    <link rel="stylesheet" href="../Projeto/assets/lib/css/Select2.css">
+    <link rel="stylesheet" href="../Projeto/assets/lib/css/chartist.css">
+    <link rel="stylesheet" href="../Projeto/assets/lib/css/chartist-plugin.css">
+    <link rel="stylesheet" href="../Projeto/assets/lib/css/shortten.css">
+    <!-- CSS Nova Template -->
+    <link rel="stylesheet" href="../Projeto/assets/lib/css/theme.css">
+  </head>
+  <body class="has-sidebar has-fixed-sidebar-and-header">
+    <!-- Header -->
+    <header class="header header-light bg-white">
+      <nav class="navbar flex-nowrap p-0">
+        <div class="navbar-brand-wrapper col-auto">
+          <!-- Logo For Mobile View -->
+          <a class="navbar-brand navbar-brand-mobile" href="../../demo-crypto/dashboards/index.html">
+            <img class="img-fluid w-100" src="../Projeto/assets/lib/Imagens/walltic.png" alt="Nova">
+          </a>
+          <!-- End Logo For Mobile View -->
+          <!-- Logo For Desktop View -->
+          <a class="navbar-brand navbar-brand-desktop" href="./deshboard/index.html">
+            <img class="side-nav-show-on-closed" src="../Projeto/assets/lib/Imagens/walltic.png" alt="Nova" style="width: 41px; height: 33px;">
+            <img class="side-nav-hide-on-closed" src="../Projeto/assets/lib/Imagens/walltic.png" alt="Nova" style="width: 200px; height: 45px;">
+          </a>
+          <!-- End Logo For Desktop View -->
+        </div>
+        <div class="header-content col px-md-3 px-md-3">
+          <div class="d-flex align-items-center">
+            <!-- Side Nav Toggle -->
+            <a class="js-side-nav header-invoker mr-md-2" href="#"
+               data-close-invoker="#sidebarClose"
+               data-target="#sidebar"
+               data-target-wrapper="body">
+              <i class="nova-align-left"></i>
+            </a>
+            <!-- End Side Nav Toggle -->
+            <!-- Header Search -->
+            <div class="js-header-search position-relative"
+                 data-search-target="#headerSearchResults"
+                 data-search-mobile-invoker="#headerSearchMobileInvoker"
+                 data-search-form="#headerSearchForm"
+                 data-search-field="#headerSearchField"
+                 data-search-clear="#headerSearchResultsClear">
+              <a id="headerSearchMobileInvoker" class="header-search-invoker header-invoker" href="#">
+                <i class="nova-search"></i>
+              </a>
+              <form id="headerSearchForm" class="header-search input-group w-18_75rem w-md-22_5rem" action="#">
+                <input id="headerSearchField" class="header-search-input form-control form-control-icon-text" type="text" placeholder="Search nova database">
+                <div class="input-group-append focus-hide">
+                  <i class="nova-search icon-text icon-text-lg"></i>
+                </div>
+                <div class="input-group-append focus-show">
+                  <span id="headerSearchResultsClear">
+                    <i class="nova-close icon-text icon-text-lg"></i>
+                  </span>
+                </div>
+              </form>
+            </div>
+            <!-- End Header Search -->
+            <!-- Header Dropdown -->
+            <div class="dropdown ml-2">
+              <a id="notificationsInvoker" class="header-invoker" href="#" aria-controls="notifications" aria-haspopup="true" aria-expanded="false"
+                 data-unfold-event="click"
+                 data-unfold-target="#notifications"
+                 data-unfold-type="css-animation"
+                 data-unfold-duration="300"
+                 data-unfold-animation-in="fadeIn"
+                 data-unfold-animation-out="fadeOut">
+                <span class="indicator indicator-bordered indicator-top-right indicator-primary rounded-circle"></span>
+                <i class="nova-bell"></i>
+              </a>
+            </div>
+            <!-- End Header Dropdown -->
+            <!-- Header User Dropdown -->
+            <div class="dropdown mx-3">
+              <a id="profileMenuInvoker" class="header-complex-invoker" href="#" aria-controls="profileMenu" aria-haspopup="true" aria-expanded="false"
+                 data-unfold-event="click"
+                 data-unfold-target="#profileMenu"
+                 data-unfold-type="css-animation"
+                 data-unfold-duration="300"
+                 data-unfold-animation-in="fadeIn"
+                 data-unfold-animation-out="fadeOut">
+                <img class="avatar rounded-circle mr-md-2" src="https://img.icons8.com/ultraviolet/64/000000/user-male-circle.png" alt="Image description">
+                <span class="d-none d-md-block">Marcos Rennan</span>
+                <i class="nova-angle-down d-none d-md-block ml-2"></i>
+              </a>
+            </div>
+            <!-- End Header User Dropdown -->
+            <!-- Info Sidebar Toggle -->
+            <a id="activityInvoker" class="header-invoker" href="#" aria-controls="activity" aria-haspopup="true" aria-expanded="false"
+               data-unfold-event="click"
+               data-unfold-target="#activity"
+               data-unfold-type="css-animation"
+               data-unfold-animation-in="fadeInRight"
+               data-unfold-animation-out="fadeOutRight"
+               data-unfold-duration="300">
+              <i class="nova-align-right"></i>
+            </a>
+            <!-- End Info Sidebar Toggle -->
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- End Header -->
+    <main class="main">
+      <!-- Sidebar Nav -->
+      <aside id="sidebar" class="js-custom-scroll side-nav">
+        <ul id="sideNav" class="side-nav-menu side-nav-menu-top-level mb-0">
+          <!-- Sidebar Sub Title -->
+          <li class="sidebar-heading h6">Home</li>
+          <!-- End Sidebar Sub Title -->
+          <!-- Dashboards -->
+          <li class="side-nav-menu-item active">
+            <a class="side-nav-menu-link media align-items-center" href="../Projeto/index.html" >
+              <span class="side-nav-menu-icon d-flex mr-3">
+                <i class="nova-dashboard"></i>
+              </span>
+              <span class="side-nav-fadeout-on-closed media-body">Pagina principal</span>
+            </a>
+            <!-- End Dashboards -->
+        </ul>
+      </aside>
+      <!-- End Sidebar Nav -->
+      <div class="content">
+        <div class="py-4 px-3 px-md-4">
+          <h1 class="h3 mb-0">Página Principal</h1>
+          <div class="row align-items-center mb-3 mb-xl-5">
+            <div class="col-md mb-2 mb-md-0"></div>
+            <div class="col-auto ml-md-auto">
+              <!-- Page Datepicker -->
+              <div id="rangePickerWrapper" class="datepicker datepicker-rangepicker d-flex align-items-center position-relative bg-white p-2">
+                <input id="rangeDatepicker" class="bg-white font-weight-semi-bold font-size-inherit text-primary text-right" type="text" style="width: 175px;"
+                       data-rp-wrapper="#rangePickerWrapper"
+                       data-rp-type="range"
+                       data-rp-date-format="d M Y"
+                       data-rp-default-date='["02 Oct 2018", "18 Oct 2018"]'>
+                <i class="nova-angle-down icon-text icon-text-xs text-primary ml-1"></i>
+              </div>
+              <!-- End Page Datepicker -->
+            </div>
+          </div>
+<!-- Card -->
+<div class="card mb-3 mb-md-4">
+  <div class="card-header border-bottom p-0">
+    <ul id="wallets" class="nav nav-v2 nav-primary nav-justified d-block d-xl-flex w-100" role="tablist">
+      <li class="nav-item border-bottom border-xl-bottom-0">
+        <a class="nav-link d-flex align-items-center py-2 px-3 p-xl-4 active" href="#bitcoin" role="tab" aria-selected="true"
+           data-toggle="tab">
+          <span>ATENDIDAS/PERDIDAS</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div id="walletsContent" class="card-body tab-content">
+    <div class="tab-pane fade show active" id="bitcoin" role="tabpanel">
+      <div class="row text-center">
+        <div class="col-6 col-md-4 mb-3 mb-md-0">
+          <div class="h3 mb-0">
+            12,012<sup class="h5">.96</sup>
+          </div>
+          <small class="text-muted">Atendidas</small>
+        </div>
+        <div class="col-6 col-md-4 mb-3 mb-md-0 border-left">
+          <div class="h3 mb-0">
+            <span class="text-secondary">
+              +
+            </span>
+            159
+            <sup class="h5">
+              .83
+            </sup>
+          </div>
+          <small class="text-muted">Perdidas</small>
+        </div>
+        <div class="col-12 col-md-4 border-left">
+          <div class="h3 mb-0">
+            <span class="text-danger">-</span>1.56<sup class="h5">%</sup>
+          </div>
+          <small class="text-muted">Total</small>
+        </div>
+      </div>
+      <div class="js-area-chart chart chart--axis-x--nowrap chart--points-invisible position-relative mh-15_6 safari-overflow-hidden pt-4 pt-md-5 pb-1"
+           data-series='[
+                 [
+                   {"meta":"4/24/2018 6:00 PM","value":"25548"},
+                   {"meta":"4/24/2018 6:00 PM","value":"25548"},
+                   {"meta":"4/24/2018 6:01 PM","value":"25552"},
+                   {"meta":"4/24/2018 6:01 PM","value":"25552"},
+                   {"meta":"4/24/2018 6:02 PM","value":"25608"},
+                   {"meta":"4/24/2018 6:02 PM","value":"25588"},
+                   {"meta":"4/24/2018 6:03 PM","value":"25588"},
+                   {"meta":"4/24/2018 6:03 PM","value":"25588"},
+                   {"meta":"4/24/2018 6:04 PM","value":"25552"},
+                   {"meta":"4/24/2018 6:04 PM","value":"25528"},
+                   {"meta":"4/24/2018 6:05 PM","value":"25528"},
+                   {"meta":"4/24/2018 6:05 PM","value":"25548"},
+                   {"meta":"4/24/2018 6:06 PM","value":"25618"},
+                   {"meta":"4/24/2018 6:06 PM","value":"25618"},
+                   {"meta":"4/24/2018 6:07 PM","value":"25632"},
+                   {"meta":"4/24/2018 6:07 PM","value":"25648"},
+                   {"meta":"4/24/2018 6:08 PM","value":"25548"},
+                   {"meta":"4/24/2018 6:08 PM","value":"25548"},
+                   {"meta":"4/24/2018 6:09 PM","value":"25588"},
+                   {"meta":"4/24/2018 6:09 PM","value":"25598"},
+                   {"meta":"4/24/2018 6:10 PM","value":"25598"},
+                   {"meta":"4/24/2018 6:10 PM","value":"25598"},
+                   {"meta":"4/24/2018 6:11 PM","value":"25608"},
+                   {"meta":"4/24/2018 6:11 PM","value":"25708"},
+                   {"meta":"4/24/2018 6:12 PM","value":"25708"},
+                   {"meta":"4/24/2018 6:12 PM","value":"25708"},
+                   {"meta":"4/24/2018 6:13 PM","value":"25688"},
+                   {"meta":"4/24/2018 6:13 PM","value":"25682"},
+                   {"meta":"4/24/2018 6:14 PM","value":"25628"},
+                   {"meta":"4/24/2018 6:14 PM","value":"25628"},
+                   {"meta":"4/24/2018 6:15 PM","value":"25628"},
+                   {"meta":"4/24/2018 6:15 PM","value":"25608"},
+                   {"meta":"4/24/2018 6:16 PM","value":"25520"},
+                   {"meta":"4/24/2018 6:16 PM","value":"25520"},
+                   {"meta":"4/24/2018 6:17 PM","value":"25520"},
+                   {"meta":"4/24/2018 6:17 PM","value":"25888"},
+                   {"meta":"4/24/2018 6:18 PM","value":"25880"},
+                   {"meta":"4/24/2018 6:18 PM","value":"25838"},
+                   {"meta":"4/24/2018 6:19 PM","value":"25838"},
+                   {"meta":"4/24/2018 6:19 PM","value":"25838"},
+                   {"meta":"4/24/2018 6:20 PM","value":"25800"},
+                   {"meta":"4/24/2018 6:20 PM","value":"25800"},
+                   {"meta":"4/24/2018 6:21 PM","value":"25800"},
+                   {"meta":"4/24/2018 6:21 PM","value":"25800"},
+                   {"meta":"4/24/2018 6:22 PM","value":"25640"},
+                   {"meta":"4/24/2018 6:22 PM","value":"25640"},
+                   {"meta":"4/24/2018 6:23 PM","value":"25640"},
+                   {"meta":"4/24/2018 6:23 PM","value":"25590"},
+                   {"meta":"4/24/2018 6:24 PM","value":"25560"},
+                   {"meta":"4/24/2018 6:24 PM","value":"25560"},
+                   {"meta":"4/24/2018 6:25 PM","value":"25560"},
+                   {"meta":"4/24/2018 6:25 PM","value":"25660"},
+                   {"meta":"4/24/2018 6:26 PM","value":"25660"},
+                   {"meta":"4/24/2018 6:26 PM","value":"25660"},
+                   {"meta":"4/24/2018 6:27 PM","value":"25668"},
+                   {"meta":"4/24/2018 6:27 PM","value":"25665"},
+                   {"meta":"4/24/2018 6:28 PM","value":"25600"},
+                   {"meta":"4/24/2018 6:28 PM","value":"25620"},
+                   {"meta":"4/24/2018 6:29 PM","value":"25620"},
+                   {"meta":"4/24/2018 6:29 PM","value":"25620"},
+                   {"meta":"4/24/2018 6:30 PM","value":"25620"},
+                   {"meta":"4/24/2018 6:30 PM","value":"25580"},
+                   {"meta":"4/24/2018 6:31 PM","value":"25585"},
+                   {"meta":"4/24/2018 6:31 PM","value":"25587"},
+                   {"meta":"4/24/2018 6:32 PM","value":"25583"},
+                   {"meta":"4/24/2018 6:32 PM","value":"25581"},
+                   {"meta":"4/24/2018 6:33 PM","value":"25901"},
+                   {"meta":"4/24/2018 6:33 PM","value":"25901"},
+                   {"meta":"4/24/2018 6:34 PM","value":"25901"},
+                   {"meta":"4/24/2018 6:34 PM","value":"25901"},
+                   {"meta":"4/24/2018 6:35 PM","value":"25850"},
+                   {"meta":"4/24/2018 6:35 PM","value":"25854"},
+                   {"meta":"4/24/2018 6:36 PM","value":"25855"},
+                   {"meta":"4/24/2018 6:36 PM","value":"25859"},
+                   {"meta":"4/24/2018 6:37 PM","value":"25780"},
+                   {"meta":"4/24/2018 6:37 PM","value":"25783"},
+                   {"meta":"4/24/2018 6:38 PM","value":"25730"},
+                   {"meta":"4/24/2018 6:38 PM","value":"25730"},
+                   {"meta":"4/24/2018 6:39 PM","value":"25730"},
+                   {"meta":"4/24/2018 6:39 PM","value":"25730"},
+                   {"meta":"4/24/2018 6:40 PM","value":"25888"},
+                   {"meta":"4/24/2018 6:40 PM","value":"25880"},
+                   {"meta":"4/24/2018 6:41 PM","value":"25838"},
+                   {"meta":"4/24/2018 6:41 PM","value":"25838"},
+                   {"meta":"4/24/2018 6:42 PM","value":"25838"},
+                   {"meta":"4/24/2018 6:42 PM","value":"25800"},
+                   {"meta":"4/24/2018 6:43 PM","value":"25800"},
+                   {"meta":"4/24/2018 6:43 PM","value":"25800"},
+                   {"meta":"4/24/2018 6:44 PM","value":"25800"},
+                   {"meta":"4/24/2018 6:44 PM","value":"25640"},
+                   {"meta":"4/24/2018 6:45 PM","value":"25640"},
+                   {"meta":"4/24/2018 6:45 PM","value":"25640"},
+                   {"meta":"4/24/2018 6:46 PM","value":"25590"},
+                   {"meta":"4/24/2018 6:46 PM","value":"25560"},
+                   {"meta":"4/24/2018 6:47 PM","value":"25560"},
+                   {"meta":"4/24/2018 6:47 PM","value":"25560"},
+                   {"meta":"4/24/2018 6:48 PM","value":"25660"},
+                   {"meta":"4/24/2018 6:48 PM","value":"25660"},
+                   {"meta":"4/24/2018 6:49 PM","value":"25660"},
+                   {"meta":"4/24/2018 6:49 PM","value":"25668"},
+                   {"meta":"4/24/2018 6:50 PM","value":"25665"},
+                   {"meta":"4/24/2018 6:50 PM","value":"25600"},
+                   {"meta":"4/24/2018 6:51 PM","value":"25620"},
+                   {"meta":"4/24/2018 6:51 PM","value":"25620"},
+                   {"meta":"4/24/2018 6:52 PM","value":"25620"},
+                   {"meta":"4/24/2018 6:52 PM","value":"25620"},
+                   {"meta":"4/24/2018 6:53 PM","value":"25580"},
+                   {"meta":"4/24/2018 6:53 PM","value":"25585"},
+                   {"meta":"4/24/2018 6:54 PM","value":"25587"},
+                   {"meta":"4/24/2018 6:54 PM","value":"25583"},
+                   {"meta":"4/24/2018 6:55 PM","value":"25581"},
+                   {"meta":"4/24/2018 6:55 PM","value":"25901"},
+                   {"meta":"4/24/2018 6:56 PM","value":"25901"},
+                   {"meta":"4/24/2018 6:56 PM","value":"25901"},
+                   {"meta":"4/24/2018 6:57 PM","value":"25901"},
+                   {"meta":"4/24/2018 6:57 PM","value":"25850"},
+                   {"meta":"4/24/2018 6:58 PM","value":"25854"},
+                   {"meta":"4/24/2018 6:58 PM","value":"25855"},
+                   {"meta":"4/24/2018 6:59 PM","value":"25859"},
+                   {"meta":"4/24/2018 6:59 PM","value":"25984"}
+
+                 ]
+               ]'
+           data-labels='["6:00 PM","6:00 PM","6:01 PM","6:01 PM","6:02 PM","6:02 PM","6:03 PM","6:03 PM","6:04 PM","6:04 PM","6:05 PM","6:05 PM","6:06 PM","6:06 PM","6:07 PM","6:07 PM","6:08 PM","6:08 PM","6:09 PM","6:09 PM","6:10 PM","6:10 PM","6:11 PM","6:11 PM","6:12 PM","6:12 PM","6:13 PM","6:13 PM","6:14 PM","6:14 PM","6:15 PM","6:15 PM","6:16 PM","6:16 PM","6:17 PM","6:17 PM","6:18 PM","6:18 PM","6:19 PM","6:19 PM","6:20 PM","6:20 PM","6:21 PM","6:21 PM","6:22 PM","6:22 PM","6:23 PM","6:23 PM","6:24 PM","6:24 PM","6:25 PM","6:25 PM","6:26 PM","6:26 PM","6:27 PM","6:27 PM","6:28 PM","6:28 PM","6:29 PM","6:29 PM","6:30 PM","6:30 PM","6:31 PM","6:31 PM","6:32 PM","6:32 PM","6:33 PM","6:33 PM","6:34 PM","6:34 PM","6:35 PM","6:35 PM","6:36 PM","6:36 PM","6:37 PM","6:37 PM","6:38 PM","6:38 PM","6:39 PM","6:39 PM","6:40 PM","6:40 PM","6:41 PM","6:41 PM","6:42 PM","6:42 PM","6:43 PM","6:43 PM","6:44 PM","6:44 PM","6:45 PM","6:45 PM","6:46 PM","6:46 PM","6:47 PM","6:47 PM","6:48 PM","6:48 PM","6:49 PM","6:49 PM","6:50 PM","6:50 PM","6:51 PM","6:51 PM","6:52 PM","6:52 PM","6:53 PM","6:53 PM","6:54 PM","6:54 PM","6:55 PM","6:55 PM","6:56 PM","6:56 PM","6:57 PM","6:57 PM","6:58 PM","6:58 PM","6:59 PM","6:59 PM"]'
+           data-labels-qty="6"
+           data-labels-start-from="8"
+           data-prefix="$"
+           data-height="250"
+           data-mobile-height="75"
+           data-high="26000"
+           data-low="25500"
+           data-offset-x="30"
+           data-offset-y="60"
+           data-is-line-smooth='[false]'
+           data-line-width='["1px"]'
+           data-line-colors='["#00cccc"]'
+           data-fill-opacity="1"
+           data-fill-colors='["#e6ffff"]'
+           data-text-size-x="14px"
+           data-text-color-x="#000000"
+           data-text-offset-top-x="10"
+           data-text-align-axis-x="center"
+           data-text-size-y="14px"
+           data-text-color-y="#868e96"
+           data-is-show-tooltips="true"
+           data-is-tooltip-divided="true"
+           data-tooltip-custom-class="chart-tooltip--divided chart-tooltip__value--bg-black chart-tooltip__meta--bg-primary small text-white"
+           data-tooltip-currency="Valor "
+           data-is-show-points="true"
+           data-point-custom-class='chart__point--donut chart__point--has-line-helper chart__point--border-xxs border-primary rounded-circle'
+           data-point-dimensions='{"width":8,"height":8}'></div>
+    </div>
+  </div>
+</div>
+<!-- End Card -->
+        <!-- Card -->
+        <div class="card mb-3 mb-md-4">
+          <div class="card-header">
+            <h5 class="h6 text-uppercase font-weight-semi-bold mb-0">QUANTIDADE DE CHAMADAS</h5>
+          </div>
+          <div class="card-body">
+            <div class="js-bar-chart position-relative mb-4 mb-xl-5"
+                 data-series="[
+                       [150,112,100,75,70,65,60,55,53],
+                       [50,37,50,50,50,50,50,50,50]
+                     ]"
+                 data-labels='["Wave 1","Wave 2","Wave 3","Wave 4","Wave 5","Wave 6","Wave 7","Wave 8","Wave 9"]'
+                 data-is-stack-bars="true"
+                 data-is-show-axis-x="false"
+                 data-is-show-axis-y="true"
+                 data-is-show-label-axis-x="true"
+                 data-is-show-label-axis-y="true"
+                 data-height="280"
+                 data-mobile-height="200"
+                 data-high="200"
+                 data-offset-axis-x="23"
+                 data-offset-axis-y="30"
+                 data-low="0"
+                 data-distance="70"
+                 data-stroke-width="40"
+                 data-mobile-stroke-width="20"
+                 data-stroke-color='["#07d7f7","#8069f2"]'
+                 data-is-grid-solid-line="true"
+                 data-grid-line-color="#eeeef1"
+                 data-label-color-axis-x="#4a4e69"
+                 data-label-font-size-axis-x="14px"
+                 data-label-color-axis-y="#868e96"
+                 data-label-font-size-axis-y="14px"
+                 data-is-show-tooltips="true"
+                 data-postfix="%"
+                 data-tooltip-custom-class="chart-tooltip chart-tooltip--black small text-white px-2 py-1"></div>
+
+            <div class="d-flex align-items-center">
+              <div class="d-flex align-items-center mr-3">
+                <span class="indicator indicator-lg indicator-primary rounded-circle mr-2"></span>
+                <small>Atendidas</small>
+              </div>
+
+              <div class="d-flex align-items-center">
+                <span class="indicator indicator-lg indicator-secondary rounded-circle mr-2"></span>
+                <small>Perdidas</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- End Card -->
+          <div class="col-xl-6 mb-3 mb-md-4">
+          <div class="card h-100">
+            <div class="card-header d-flex">
+              <h5 class="h6 font-weight-semi-bold text-uppercase mb-0">ASR</h5>
+              <div class="position-relative ml-auto">
+                <a id="dropDown3Invoker" class="unfold-invoker d-flex text-muted" href="#"
+                   aria-controls="dropDown3" aria-haspopup="true" aria-expanded="false"
+                   data-unfold-target="#dropDown3"
+                   data-unfold-event="click"
+                   data-unfold-type="css-animation"
+                   data-unfold-duration="300"
+                   data-unfold-animation-in="fadeIn"
+                   data-unfold-animation-out="fadeOut">
+                  <i class="nova-more"></i>
+                </a>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <div class="border-bottom text-center p-3 p-md-4 pb-md-6">
+                <div class="js-donut-chart position-relative d-flex mx-auto mb-3 mb-md-4" style="width: 130px; height: 130px;"
+                     data-series="[65,35]"
+                     data-border-width="12"
+                     data-slice-margin="2"
+                     data-start-angle="0"
+                     data-fill-colors='["#8069f2","#0cdcB9"]'
+                     data-is-show-tooltips="true"
+                     data-tooltip-currency="%"
+                     data-is-tooltip-currency-reverse="true"
+                     data-tooltip-custom-class="chart-tooltip chart-tooltip--triangle-right chart-tooltip--black small text-white px-2 py-1 mt-5 ml-n5"></div>
+                <div class="small text-muted">Total</div>
+              </div>
+              <div class="border-bottom media align-items-center p-3">
+                <img class="d-flex icon-img icon-img-sm mr-2"
+                     src="https://img.icons8.com/color/48/000000/phone.png" alt="Image description">
+                <div class="media-body d-flex align-items-center mr-2">
+                  <span>Atendidas</span>
+                  <span class="ml-auto">$393.15</span>
+                </div>
+                <i class="nova-arrow-down icon-text icon-text-xs d-flex text-danger ml-auto"></i>
+              </div>
+              <div class="media align-items-center p-3">
+                <img class="d-flex icon-img icon-img-sm mr-2" src="https://img.icons8.com/color/48/000000/missed-call.png"
+                     alt="Image description">
+                <div class="media-body d-flex align-items-center mr-2">
+                  <span>Perdidas</span>
+                  <span class="ml-auto">$7,040.87</span>
+                </div>
+                <i class="nova-arrow-up icon-text icon-text-xs d-flex text-info ml-auto"></i>
+              </div>
+            </div>
+          </div>
+          </div>
+          <!--End Card -->
+
+          <!--Card-->
+          <div class="col-xl-6 mb-3 mb-md-4">
+            <!-- Card -->
+            <div class="card h-100">
+              <div class="card-header">
+                <h5 class="h6 text-uppercase font-weight-semi-bold mb-0">Tabela de Informações</h5>
+              </div>
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="card-table text-nowrap">
+                    <thead>
+                      <tr class="small">
+                        <th class="font-weight-normal text-muted pb-3">Descrições</th>
+                        <th class="font-weight-normal text-muted pb-3">Valores</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="py-3">
+                          <img class="icon-img icon-img-sm mr-2" src="https://img.icons8.com/color/48/000000/forward.png" alt="Bitcoin">
+                          Faturamento
+                        </td>
+                        <td class="py-3">$0.0000</td>
+                      </tr>
+                      <tr>
+                        <td class="py-3">
+                          <img class="icon-img icon-img-sm mr-2" src="https://img.icons8.com/color/48/000000/forward.png" alt="Ethereum">
+                          Total Arrecadado
+                        </td>
+                        <td class="py-3">$0.00126</td>
+                      </tr>
+                      <tr>
+                        <td class="py-3">
+                          <img class="icon-img icon-img-sm mr-2" src="https://img.icons8.com/color/48/000000/forward.png" alt="NEO">
+                          Atendidas
+                        </td>
+                        <td class="py-3">$0.00126</td>
+                      </tr>
+                      <tr>
+                        <td class="py-3 border-0">
+                          <img class="icon-img icon-img-sm mr-2" src="https://img.icons8.com/color/48/000000/forward.png" alt="BitCash">
+                          Total de chamdas
+                        </td>
+                        <td class="py-3 border-0">$0.00126</td>
+                      </tr>
+                      <tr>
+                        <td class="py-3 border-0">
+                          <img class="icon-img icon-img-sm mr-2" src="https://img.icons8.com/color/48/000000/forward.png" alt="BitCash">
+                          ACD
+                        </td>
+                        <td class="py-3 border-0">$0.00126</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- End Card -->
+          </div>
+          <!--End Card-->
+
+          </div>
+
+          <!-- Card -->
+          <div class="card mb-3 mb-md-4">
+            <div class="card-header">
+              <h5 class="h6 text-uppercase font-weight-semi-bold mb-0">ACCOUNT CODE COM MAIORES FLUXOS</h5>
+            </div>
+            <div class="card-body p-0">
+              <div class="row align-item1s-center d-print-none px-3 px-md-4 pb-1">
+                <div class="col-md-auto d-flex align-items-center">
+                  <span class="text-muted mr-2">Show:</span>
+                  <select id="datatableEntries" class="js-custom-select"
+                          data-classes="select-simple">
+                    <option value="6" selected>6 entries</option>
+                    <option value="10">10 entries</option>
+                    <option value="16">16 entries</option>
+                  </select>
+                </div>
+                <div class="col-md-auto ml-md-auto">
+                  <div class="input-group">
+                    <div class="input-group-append">
+                      <i class="nova-search icon-text"></i>
+                    </div>
+                    <input id="datatableSearch" class="form-control bg-lighter border-0 form-control-icon-text" placeholder="Enter search term" type="text">
+                  </div>
+                </div>
+              </div>
+              <div class="table-responsive">
+                <table class="js-datatable card-table text-nowrap"
+                       data-dt-info="#datatableInfo"
+                       data-dt-search="#datatableSearch"
+                       data-dt-entries="#datatableEntries"
+                       data-dt-is-show-paging="true"
+                       data-dt-pagination="datatablePagination"
+                       data-dt-page-length="6"
+                       data-dt-is-responsive="false"
+                       data-dt-pagination-classes="pagination justify-content-end font-weight-semi-bold mb-0"
+                       data-dt-pagination-items-classes="page-item d-none d-md-block"
+                       data-dt-pagination-links-classes="page-link"
+                       data-dt-pagination-next-classes="page-item"
+                       data-dt-pagination-next-link-classes="page-link"
+                       data-dt-pagination-next-link-markup='<i class="nova-angle-right icon-text icon-text-xs d-inline-block"></i>'
+                       data-dt-pagination-prev-classes="page-item"
+                       data-dt-pagination-prev-link-classes="page-link"
+                       data-dt-pagination-prev-link-markup='<i class="nova-angle-left icon-text icon-text-xs d-inline-block"></i>'>
+                  <thead>
+                    <tr class="small text-muted">
+                      <th class="font-weight-normal py-3">Descrições</th>
+                      <th class="font-weight-normal py-3">Serviços</th>
+                      <th class="font-weight-normal py-3">Account Code</th>
+                      <th class="font-weight-normal py-3 d-print-none">Mais</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="py-3">
+                        <span class="d-none">1</span>
+                        <img class="icon-img icon-img-sm mr-2" src="https://img.icons8.com/color/48/000000/parallel-tasks.png" alt="Bitcoin">
+                        CEMAR Negociações
+                      </td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3 text-right d-print-none">
+                        <a class="btn btn-outline-primary" href="#">Mais</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="py-3">
+                        <span class="d-none">2</span>
+                        <img class="icon-img icon-img-sm mr-2" src="https://img.icons8.com/color/48/000000/parallel-tasks.png" alt="Bitcoin">
+                        CEMAR Telecom
+                      </td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3 text-right d-print-none">
+                        <a class="btn btn-outline-primary" href="#">Mais</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="py-3">
+                        <span class="d-none">3</span>
+                        <img class="icon-img icon-img-sm mr-2" src="https://img.icons8.com/color/48/000000/parallel-tasks.png" alt="Bitcoin">
+                        CEMAR Agencias
+                      </td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3 text-right d-print-none">
+                        <a class="btn btn-outline-primary" href="#">Mais</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="py-3">
+                        <span class="d-none">4</span>
+                        <img class="icon-img icon-img-sm mr-2" src="https://img.icons8.com/color/48/000000/parallel-tasks.png" alt="Bitcoin">
+                        CELPA Agencias
+                      </td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3 text-right d-print-none">
+                        <a class="btn btn-outline-primary" href="#">Mais</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="py-3">
+                        <span class="d-none">5</span>
+                        <img class="icon-img icon-img-sm mr-2" src="https://img.icons8.com/color/48/000000/parallel-tasks.png" alt="Bitcoin">
+                        CEMAR Caema
+                      </td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3 text-right d-print-none">
+                        <a class="btn btn-outline-primary" href="#">Mais</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="py-3">
+                        <span class="d-none">6</span>
+                        <img class="icon-img icon-img-sm mr-2" src="https://img.icons8.com/color/48/000000/parallel-tasks.png" alt="Bitcoin">
+                        CEMAR Corporativo
+                      </td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3 text-right d-print-none">
+                        <a class="btn btn-outline-primary" href="#">Mais</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="py-3">
+                        <span class="d-none">7</span>
+                        <img class="icon-img icon-img-sm mr-2" src="https://img.icons8.com/color/48/000000/parallel-tasks.png" alt="Bitcoin">
+                        CELPA Corporativo
+                      </td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3 text-right d-print-none">
+                        <a class="btn btn-outline-primary" href="#">Mais</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="py-3">
+                        <span class="d-none">8</span>
+                        <img class="icon-img icon-img-sm mr-2" src="https://img.icons8.com/color/48/000000/parallel-tasks.png" alt="Bitcoin">
+                        CEMAR Ouvidoria
+                      </td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3 text-right d-print-none">
+                        <a class="btn btn-outline-primary" href="#">Mais</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="py-3">
+                        <span class="d-none">9</span>
+                        <img class="icon-img icon-img-sm mr-2" src="https://img.icons8.com/color/48/000000/parallel-tasks.png" alt="Bitcoin">
+                        CEMAR Seguros
+                      </td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3 text-right d-print-none">
+                        <a class="btn btn-outline-primary" href="#">Mais</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="py-3">
+                        <span class="d-none">10</span>
+                        <img class="Maiscon-img icon-img-sm mr-2" src="https://img.icons8.com/color/48/000000/parallel-tasks.png" alt="Bitcoin">
+                        CELPA Atendimento ao Cliente
+                      </td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3 text-right d-print-none">
+                        <a class="btn btn-outline-primary" href="#">Mais</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="py-3">
+                        <span class="d-none">11</span>
+                        <img class="icon-img icon-img-sm mr-2" src="https://img.icons8.com/color/48/000000/parallel-tasks.png" alt="Bitcoin">
+                        CEMAR 116
+                      </td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3 text-right d-print-none">
+                        <a class="btn btn-outline-primary" href="#">Mais</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="py-3">
+                        <span class="d-none">12</span>
+                        <img class="icon-img icon-img-sm mr-2" src="https://img.icons8.com/color/48/000000/parallel-tasks.png" alt="Bitcoin">
+                        CEPISA
+                      </td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3 text-right d-print-none">
+                        <a class="btn btn-outline-primary" href="#">Mais</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="py-3">
+                        <span class="d-none">13</span>
+                        <img class="icon-img icon-img-sm mr-2" src="https://img.icons8.com/color/48/000000/parallel-tasks.png" alt="Bitcoin">
+                        CEPISA Ouvidoria
+                      </td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3 text-right d-print-none">
+                        <a class="btn btn-outline-primary" href="#">Mais</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="py-3">
+                        <span class="d-none">14</span>
+                        <img class="icon-img icon-img-sm mr-2" src="https://img.icons8.com/color/48/000000/parallel-tasks.png" alt="Bitcoin">
+                        CEAL Atendimento 1
+                      </td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3 text-right d-print-none">
+                        <a class="btn btn-outline-primary" href="#">Mais</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="py-3">
+                        <span class="d-none">15</span>
+                        <img class="icon-img icon-img-sm mr-2" src="https://img.icons8.com/color/48/000000/parallel-tasks.png" alt="Bitcoin">
+                        CEAL Atendimento 2
+                      </td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3 text-right d-print-none">
+                        <a class="btn btn-outline-primary" href="#">Mais</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="py-3">
+                        <span class="d-none">16</span>
+                        <img class="icon-img icon-img-sm mr-2" src="https://img.icons8.com/color/48/000000/parallel-tasks.png" alt="Bitcoin">
+                        CEAL Varejo
+                      </td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3">34.53141439</td>
+                      <td class="py-3 text-right d-print-none">
+                        <a class="btn btn-outline-primary" href="#">Mais</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="media d-block d-md-flex align-items-center p-3 p-md-4">
+                <div id="datatableInfo" class="d-flex mb-2 mb-md-0"></div>
+                <nav id="datatablePagination" class="d-flex ml-md-auto d-print-none" aria-label="Pagination"></nav>
+              </div>
+            </div>
+          </div>
+          <!-- End Card -->
+        </div>
+        <!-- Footer -->
+        <footer class="small bg-white p-3 px-md-4 mt-auto d-print-none">
+          <div class="row justify-content-between">
+            <div class="col-lg text-center text-lg-left mb-3 mb-lg-0">
+              <ul class="list-dot list-inline mb-0">
+                <li class="list-dot-item list-dot-item-not list-inline-item mr-lg-2"><a class="link-dark" href="#">WALLTIC</a></li>
+                <li class="list-dot-item list-inline-item mr-lg-2"><a class="link-dark" href="#">Telecom</a></li>
+                <li class="list-dot-item list-inline-item mr-lg-2"><a class="link-dark" href="#">LTDA</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg text-center mb-3 mb-lg-0">
+              <ul class="list-inline mb-0">
+                <li class="list-inline-item mx-2"><a class="link-muted" href="#"><i class="nova-twitter-alt"></i></a></li>
+                <li class="list-inline-item mx-2"><a class="link-muted" href="#"><i class="nova-vimeo-alt"></i></a></li>
+                <li class="list-inline-item mx-2"><a class="link-muted" href="#"><i class="nova-github"></i></a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg text-center text-lg-right">
+              &copy; 2019 Htmlstream. All Rights Reserved.
+            </div>
+          </div>
+        </footer>
+        <!-- End Footer -->
+      </div>
+    </main>
+
+    <!-- JS Global Compulsory -->
+    <script src="../Projeto/assets/lib/js/JS Global/Jquery.js"></script>
+    <script src="../Projeto/assets/lib/js/JS Global/Jquery-migrate.js"></script>
+    <script src="../Projeto/assets/lib/js/JS Global/popper.js"></script>
+    <script src="../Projeto/assets/lib/js/JS Global/bootstrap.js"></script>
+
+    <!-- JS Implementing Libraries -->
+    <script src="../Projeto/assets/lib/js/JS Implementing Libraries/Jquery.mCustomScrollbar.js"></script>
+    <script src="../Projeto/assets/lib/js/JS Implementing Libraries/flatpickr.js"></script>
+    <script src="../Projeto/assets/lib/js/JS Implementing Libraries/select2.full.js"></script>
+    <script src="../Projeto/assets/lib/js/JS Implementing Libraries/chartist.js"></script>
+    <script src="../Projeto/assets/lib/js/JS Implementing Libraries/chartlist-plugin.js"></script>
+    <script src="../Projeto/assets/lib/js/JS Implementing Libraries/chartlist-bar.js"></script>
+    <script src="../Projeto/assets/lib/js/JS Implementing Libraries/resizeSensor.js"></script>
+    <script src="../Projeto/assets/lib/js/JS Implementing Libraries/jquery.shorten.js"></script>
+    <script src="../Projeto/assets/lib/js/JS Implementing Libraries/jquery.dataTable.js"></script>
+    <script src="../Projeto/assets/lib/js/JS Implementing Libraries/dataTable.js"></script>
+
+    <!-- JS Nova -->
+    <script src="../Projeto/assets/lib/js/JS Nova/hs.core.js"></script>
+    <script src="../Projeto/assets/lib/js/JS Nova/hs.malihu.scrollbar.js"></script>
+    <script src="../Projeto/assets/lib/js/JS Nova/hs.side.nav.js"></script>
+    <script src="../Projeto/assets/lib/js/JS Nova/hs.unfold.js"></script>
+    <script src="../Projeto/assets/lib/js/JS Nova/hs.flatpickr.js"></script>
+    <script src="../Projeto/assets/lib/js/JS Nova/hs.header-search.js"></script>
+    <script src="../Projeto/assets/lib/js/JS Nova/hs.select2.js"></script>
+    <script src="../Projeto/assets/lib/js/JS Nova/hs.chartlist-area.js"></script>
+    <script src="../Projeto/assets/lib/js/JS Nova/hs.chartlist-bar.js"></script>
+    <script src="../Projeto/assets/lib/js/JS Nova/hs.chartlist-pie.js"></script>
+    <script src="../Projeto/assets/lib/js/JS Nova/hs.chartlist-donut.js"></script>
+    <script src="../Projeto/assets/lib/js/JS Nova/hs.datatables.js"></script>
+
+    <!-- JS Libraries Init. -->
+    <script>
+      $(document).on('ready', function () {
+        // initialization of custom scroll
+        $.HSCore.components.HSMalihuScrollBar.init($('.js-custom-scroll'));
+
+        // initialization of sidebar navigation component
+        $.HSCore.components.HSSideNav.init('.js-side-nav');
+
+        // initialization of dropdown component
+        $.HSCore.components.HSUnfold.init($('[data-unfold-target]'), {
+          unfoldHideOnScroll: false,
+          afterOpen: function () {
+            // initialization of charts
+            $.HSCore.components.HSChartistBar.init('#activity .js-bar-chart');
+
+            setTimeout(function() {
+              $('#activity .js-bar-chart').css('opacity', 1);
+            }, 100);
+
+            // help function for accordions in hidden block
+            $('#headerProjects .accordion-header').on('click', function () {
+              // vars
+              var target = $(this).data('target');
+
+              $(target).collapse('show');
+            });
+          }
+        });
+
+        // initialization of range datepicker
+        $.HSCore.components.HSFlatpickr.init('#headerRightSidebarDatepicker', {
+          locale: {
+            weekdays: {
+              shorthand: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+            }
+          },
+          nextArrow: '<i class="nova-arrow-right icon-text icon-text-xs"></i>',
+          prevArrow: '<i class="nova-arrow-left icon-text icon-text-xs"></i>'
+        });
+
+        $.HSCore.components.HSFlatpickr.init('#rangeDatepicker, #rangeDatepickerMyPortfolio', {
+          locale: {
+            weekdays: {
+              shorthand: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+            },
+            rangeSeparator: ' - '
+          },
+          nextArrow: '<em class="nova-arrow-right"></em>',
+          prevArrow: '<em class="nova-arrow-left"></em>'
+        });
+
+        // initialization of show on type module
+        $.HSCore.components.HSHeaderSearch.init('.js-header-search');
+
+        // initialization of show on type module
+        $.HSCore.components.HSSelect2.init('.js-custom-select');
+
+        // initialization of charts
+        $.HSCore.components.HSChartistArea.init('.js-area-chart');
+        $.HSCore.components.HSChartistBar.init('.js-bar-chart');
+        $.HSCore.components.HSChartistDonut.init('.js-donut-chart');
+
+        $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+          $(e.currentTarget.hash).find('.js-area-chart').each(function(el, tab) {
+            tab.__chartist__.update();
+          });
+        });
+
+        // initialization of datatables
+        $.HSCore.components.HSDatatables.init('.js-datatable');
+      });
+    </script>
+  </body>
+</html>
